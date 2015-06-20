@@ -59,4 +59,8 @@ target/
 #emacs
 *~
 
-data/*.csv*.mp3
+*.csv
+*.mp3
+
+*.wav
+

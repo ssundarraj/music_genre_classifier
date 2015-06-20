@@ -15,8 +15,6 @@ We chose the following features to describe the song:
 
 ### Tempo Extraction
 
-### Pitch Extraction
-
 ### Key Extraction
 
 ### Scale Extraction
