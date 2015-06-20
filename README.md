@@ -17,5 +17,7 @@ We chose the following features to describe the song:
 
 ### Pitch Extraction
 
-### Pitch Extraction
+### Key Extraction
+
+### Scale Extraction
 
