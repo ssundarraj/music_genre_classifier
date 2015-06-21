@@ -139,8 +139,4 @@ def get_tempo(filename, window):
         samps_ndx = samps_ndx + window_samps
 
     bpm = numpy.median(bpms)
-    print bpm
-
-
-if __name__ == '__main__':
-    get_tempo("Pompeii.wav", 10)
+    return bpm
