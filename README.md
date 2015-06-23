@@ -11,3 +11,6 @@ We chose the following features to describe the song:
 
 To extract features
 `python feature_extractor.py /path/to/1.mp3 /path/to/2.mp3 ...`
+
+To clean the data
+`python data)cleaner.py data.csv`

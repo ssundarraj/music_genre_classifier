@@ -16,9 +16,12 @@ def clean_data(file_name, op_file_name):
         datareader = csv.reader(csvfile, delimiter=',',)
         datawriter = csv.writer(cleancsvfile, delimiter=',')
         for row in datareader:
+            if 'nan' in row:
+                continue
             row[-1] = genres.index(row[-1]) + 1
             print row
-            
+
+            row = [float(i) for i in row]
             datawriter.writerow(row)
 
 if __name__ == '__main__':
