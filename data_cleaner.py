@@ -19,6 +19,7 @@ def clean_data(file_name, op_file_name):
             if 'nan' in row:
                 continue
             row[-1] = genres.index(row[-1]) + 1
+            row = [float(i) for i in row]
             datawriter.writerow(row)
 
 if __name__ == '__main__':
