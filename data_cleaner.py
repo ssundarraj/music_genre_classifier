@@ -18,6 +18,7 @@ def clean_data(file_name, op_file_name):
         for row in datareader:
             row[-1] = genres.index(row[-1]) + 1
             print row
+            
             datawriter.writerow(row)
 
 if __name__ == '__main__':
