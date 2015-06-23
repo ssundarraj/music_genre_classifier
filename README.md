@@ -7,8 +7,6 @@ Given an input .mp3 file, the program will output it's genre.
 We chose the following features to describe the song:
 * MFCC
 * Tempo
-* Pitch
-* Key
 * Scale
 
 To extract features
