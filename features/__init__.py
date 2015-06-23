@@ -1,1 +1,1 @@
-from main import get_feature_vector
+from main import feature_extract

@@ -11,11 +11,5 @@ We chose the following features to describe the song:
 * Key
 * Scale
 
-### MFCC Extraction
-
-### Tempo Extraction
-
-### Key Extraction
-
-### Scale Extraction
-
+To extract features
+`python feature_extractor.py /path/to/1.mp3 /path/to/2.mp3 ...`
