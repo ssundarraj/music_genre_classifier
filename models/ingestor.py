@@ -34,7 +34,7 @@ def get_data(file_name):
 
 
 
-    data = SelectKBest(chi2, k=15).fit_transform(data,target)
+    #data = SelectKBest(chi2, k=17).fit_transform(data,target)
    
     
 
@@ -42,7 +42,7 @@ def get_data(file_name):
 
     data_length = len(data)
 
-    split_factor = int(0.75*data_length)
+    split_factor = int(0.91*data_length)
     training_data = data[:split_factor]
 
 
