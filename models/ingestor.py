@@ -1,5 +1,6 @@
 import csv
 import numpy as np
+<<<<<<< HEAD
 from sklearn import preprocessing
 from sklearn.svm import LinearSVC
 from sklearn.feature_selection import SelectKBest
@@ -12,6 +13,9 @@ def absHelper(data):
             data[i][j] = abs(data[i][j])
     return data    
 
+
+
+
 def get_data(file_name):
     with open(file_name, 'rb') as csvfile:
         data = []
@@ -21,6 +25,7 @@ def get_data(file_name):
             row = [abs(float(i)) for i in row]
             data.append(row[:-1])
             target.append(row[-1])
+
 
    
     data = np.array(data) 
@@ -44,12 +49,12 @@ def get_data(file_name):
 
 
     test_data = data[split_factor+1:]
+
     training_target = target[:split_factor]
-    test_target = target[split_factor+1:]
+    test_target = target[split_factor + 1:]
 
 
 
 
+    return (training_data,training_target,test_data,test_target)     
 
-
-    return (training_data,training_target,test_data,test_target)        

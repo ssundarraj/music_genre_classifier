@@ -8,7 +8,6 @@ training_data,training_target,test_data,test_target = ingestor.get_data('../clea
 
 
 
-
 clf = svm.SVC()
 clf.fit(training_data,training_target)
 
