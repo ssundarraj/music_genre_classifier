@@ -1,6 +1,5 @@
 import csv
 import numpy as np
-<<<<<<< HEAD
 from sklearn import preprocessing
 from sklearn.svm import LinearSVC
 from sklearn.feature_selection import SelectKBest
