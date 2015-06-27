@@ -1,4 +1,5 @@
 from sklearn import svm
+from sklearn.ensemble import ExtraTreesClassifier
 import csv
 import ingestor
 import validator

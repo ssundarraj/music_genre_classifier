@@ -21,7 +21,7 @@ def clean_data(file_name, op_file_name):
             row[-1] = genres.index(row[-1]) + 1
             print row
 
-            row = [float(i) for i in row]
+            row = [abs(float(i)) for i in row]
             datawriter.writerow(row)
 
 if __name__ == '__main__':

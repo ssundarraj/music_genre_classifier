@@ -1,4 +1,5 @@
 from sklearn import linear_model
+
 import csv
 import ingestor
 import validator
