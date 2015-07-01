@@ -10,7 +10,7 @@ def clean_data(file_name, op_file_name):
         for row in datareader:
             genres.append(row[-1])
 
-    ignored_genres = ['Classical', 'Jazz', 'Traditional', 'Soundtrack']
+    ignored_genres = ['Classical', 'Jazz', 'Traditional', 'Soundtrack','Other']
     for i in ignored_genres:
         genres.remove(i)
     genres = list(set(genres))
