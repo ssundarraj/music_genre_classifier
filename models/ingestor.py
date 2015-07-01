@@ -11,9 +11,7 @@ def absHelper(data):
     for i in range(len(data)):
         for j in range(len(data[0])):
             data[i][j] = abs(data[i][j])
-    return data    
-
-
+    return data
 
 
 def get_data(file_name):
@@ -26,34 +24,21 @@ def get_data(file_name):
             data.append(row[:-1])
             target.append(row[-1])
 
-
-   
-    data = np.array(data) 
-    data = preprocessing.scale(data)  
+    data = np.array(data)
+    data = preprocessing.scale(data)
 
     data = absHelper(data)
 
-
-    data = SelectKBest(chi2, k=19).fit_transform(data,target)
-   
-    
-
-
+    data = SelectKBest(chi2, k=19).fit_transform(data, target)
 
     data_length = len(data)
 
-    split_factor = int(0.91*data_length)
+    split_factor = int(0.91 * data_length)
     training_data = data[:split_factor]
 
-
-
-    test_data = data[split_factor+1:]
+    test_data = data[split_factor + 1:]
 
     training_target = target[:split_factor]
     test_target = target[split_factor + 1:]
 
-
-
-
-    return (training_data,training_target,test_data,test_target)     
-
+    return (training_data, training_target, test_data, test_target)

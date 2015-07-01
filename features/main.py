@@ -30,10 +30,12 @@ def get_feature_vector(filename):
     feature_vector.append(song_genre)
     return feature_vector
 
+
 def feature_extract(file_list):
     print "Total: {0}".format(len(file_list))
     with open('data.csv', 'wb') as csvfile:
-        fvwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_MINIMAL)
+        fvwriter = csv.writer(
+            csvfile, delimiter=',', quoting=csv.QUOTE_MINIMAL)
         for index, f in enumerate(file_list):
             print index
             try:
@@ -43,5 +45,3 @@ def feature_extract(file_list):
                 fvwriter.writerow(fv)
             except:
                 pass
-
-

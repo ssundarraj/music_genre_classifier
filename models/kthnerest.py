@@ -7,20 +7,12 @@ import validator
 from sklearn.cluster import KMeans
 
 
-
-
-
-
-training_data,training_target,test_data,test_target = ingestor.get_data('../clean_data.csv')
-
+training_data, training_target, test_data, test_target = ingestor.get_data(
+    '../clean_data.csv')
 
 
 clf = KNeighborsClassifier()
 
-clf.fit(training_data,training_target)
+clf.fit(training_data, training_target)
 
-print validator.validate(clf,test_data,test_target)
-
-
-
-
+print validator.validate(clf, test_data, test_target)
