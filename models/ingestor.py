@@ -4,6 +4,7 @@ from sklearn import preprocessing
 from sklearn.svm import LinearSVC
 from sklearn.feature_selection import SelectKBest
 from sklearn.feature_selection import chi2
+from sklearn.decomposition import PCA
 
 
 def absHelper(data):
@@ -33,8 +34,7 @@ def get_data(file_name):
     data = absHelper(data)
 
 
-
-    #data = SelectKBest(chi2, k=17).fit_transform(data,target)
+    data = SelectKBest(chi2, k=19).fit_transform(data,target)
    
     
 
