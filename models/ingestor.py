@@ -33,7 +33,7 @@ def get_data(file_name):
 
     data_length = len(data)
 
-    split_factor = int(0.91 * data_length)
+    split_factor = int(0.80 * data_length)
     training_data = data[:split_factor]
 
     test_data = data[split_factor + 1:]
