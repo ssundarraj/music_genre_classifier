@@ -10,7 +10,7 @@
 	The intelligent machine is an evil genie, escaped from its bottle.
 										-	BRIAN HERBERT & KEVIN J. ANDERSON, The Butlerian Jihad
 
-Automatic music genre classification is an  application of artificial intelligence ,more specifically machine learning to build a system that predicts the genre of a song.It is fairly simple for a human being to identify the genre of a song ,one thinks about how fast the beat of the song is ,the mood the song and the video of the song etc .All these help create a mental picture of the song and  thus the genres associated with it are determined.Automatic genre classification can be useful to answer some very intersting problems like  making song recommendations,finding similiar songs ,finding people who will like that particular song etc.
+Automatic music genre classification is an  application of artificial intelligence ,more specifically machine learning to build a system that predicts the genre of a song.It is fairly simple for a human being to identify the genre of a song ,one thinks about how fast the beat of the song is ,the mood the song and the video of the song etc .All these help create a mental picture of the song and  thus the genres associated with it are determined.Automatic genre classification can be useful to answer some very intersting questions like  making song recommendations,finding similiar songs ,finding people who will like that particular song etc.
 	Intelligene and automation are the core ideas that drove us into making this sytem.
 
 ###Related Work
@@ -21,7 +21,31 @@ Automatic music genre classification is an  application of artificial intelligen
 	Our work differs from the previous two with respect to the feature vector under consideration.The Song has been analyzed as a wave and as a song well .
 
 
-* DataSet Description and analysis
+###DataSet Description and analysis
+* We treated the song as a wave and some features were based on that,while some other features were based on the song level characteristics we also used.The feature vector is of length 19. 13 features were the MFCC (Mel-frequency cepstral coefficients)[2] .MFCC was calculated using the open source scikit audiolabs library . [4]
+
+######CALCULATION OF MFCC  (13 features)
+* A highlevel description of MFCC Calulcation [5] is explained below: 
+ Frame the signal into short frames.
+ For each frame calculate the periodogram estimate of the power spectrum.
+ Apply the mel filterbank to the power spectra, sum the energy in each filter.
+ Take the logarithm of all filterbank energies.
+ Take the DCT of the log filterbank energies.
+ Keep DCT coefficients 2-13, discard the rest.
+	
+
+######CALCULATION OF SCALE (5 features)
+
+
+
+
+######CALCULATION OF TEMPO (1 feature)
+
+
+
+
+
+
 * Figure-1 Dataset genrewise number of songs
 * Features
 * Figure-2 Feature Correlation Graph
@@ -43,7 +67,7 @@ Automatic music genre classification is an  application of artificial intelligen
 
 * 3.[ George Tzanetakis,Georg Essl,Perry Cook.Automatic Music Genre Classification for audio signals ](http://ismir2001.ismir.net/pdf/tzanetakis.pdf)
 
+* 4. [ Scikits Audiolab ](https://pypi.python.org/pypi/scikits.audiolab/)
 
-
-
+* 5.[ MFCC Calculation Theory ](http://www.practicalcryptography.com/miscellaneous/machine-learning/guide-mel-frequency-cepstral-coefficients-mfccs/)
 
