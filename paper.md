@@ -23,7 +23,7 @@ Automatic music genre classification is an  application of artificial intelligen
 
 ##FLOW DIAGRAM
 
-![Flow Diagram](flow.png "FLOW DIAGRAM")
+![Flow Diagram](figures/flow.jpg "FLOW DIAGRAM")
 
 ###FEATURE EXTRACTION
 * We treated the song as a wave and as a song as well ,meaning  some features were based on wave properties,while some other features were based on song level characteristics .The feature vector is of length 19. 13 features were the MFCC (Mel-frequency cepstral coefficients)[2] .MFCC was calculated using the open source scikit audiolabs library . [4]
@@ -54,26 +54,25 @@ Automatic music genre classification is an  application of artificial intelligen
 * The target genres were 'Urban', 'Classical', 'Electronica', 'Jazz', 'Pop', 'Soundtrack', 'Alternative & Punk', 'Rock', 'Other' .
 	
 
-![alt text](figure.jpg "Bargraph of the dataset")
+![alt text](figures/figure.jpg "Bargraph of the dataset")
 	
 
 ######DATA CLEANING:
 * Soundtrack,Other,Jazz,Classical and traditional were ignored due to low number of samples.
+
 * Genre converted from string to integers through a map to suit models construction and prediction.
+
 * Samples with missing genres were ignored.
- 
 
 
 
 
 
+###MODELS          
 
-* Figure-2 Feature Correlation Graph Do we need ? GOOSE
-###Models           
-write up about the models and scikit
-* Logistic Rregression          
-* Support Vector Machine		
-* Kth Nearest						
+
+For building the models ,we used the SCIKIT [8] library.The models we used are the standard classification algorithms Logistic Regression,Support Vector Machine and KMeans .
+
 
 
 ###RESULTS
@@ -101,3 +100,4 @@ write up about the models and scikit
 
 * 7.[ pygn ](https://github.com/cweichen/pygn)
 
+* 8.[ scikit ](http://scikit-learn.org/stable/)
