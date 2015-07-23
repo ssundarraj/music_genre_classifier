@@ -14,3 +14,8 @@ lr.fit(training_data, training_target)
 
 
 print validator.validate(lr, test_data, test_target)
+
+
+
+
+

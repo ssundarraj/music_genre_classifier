@@ -29,7 +29,7 @@ def get_data(file_name):
 
     data = absHelper(data)
 
-    data = SelectKBest(chi2, k=19).fit_transform(data, target)
+    #data = SelectKBest(chi2, k=19).fit_transform(data, target)
 
     data_length = len(data)
 

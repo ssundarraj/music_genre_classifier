@@ -32,14 +32,15 @@ Our work differs from the previous two with respect to the feature vector under 
 * We treated the song as a wave and as a song as well, meaning some features were based on wave properties, and other features were based on song level characteristics. The feature vector is of length 19. 13 features were the MFCC (Mel-frequency cepstral coefficients)[2].  [4]
 
 ######CALCULATION OF MFCC  (13 features)
+* MFCC is a representation of the power spectrum of sound .
 * MFCC was calculated using the open source scikit audiolabs library.
 * A highlevel description of MFCC Calulcation [5] is explained below: 
  Frame the signal into short frames.
  For each frame calculate the periodogram estimate of the power spectrum.
  Apply the mel filterbank to the power spectra, sum the energy in each filter.
  Take the logarithm of all filterbank energies.
- Take the DCT of the log filterbank energies.
- Keep DCT coefficients 2-13, discard the rest.
+ Take the Discrete Cosine Transform (DCT)  of the log filterbank energies.
+ Keep Discrete Cosing Transform (DCT) coefficients 2-13, discard the rest.
 	
 
 ######CALCULATION OF SCALE (5 features)
@@ -83,12 +84,17 @@ For building the models, we used the SCIKIT [8] library.The models we used are t
 
 
 ###RESULTS
-* Results
-* Figure-3 Accuracy across genres  classify test set genre wise and find % results
-* Best Model svm or lr i guess 
-* Conclusion
+
+| Model                	| Electronica 	| Urban 	| Alternative & Punk 	| Pop   	| Rock 	| Overall Model Accuracy 	|
+|----------------------	|-------------	|-------	|--------------------	|-------	|------	|------------------------	|
+| Logistic Regression  	| 0           	| 56.52 	| 49.1               	| 28.57 	| 50   	| 44.55                  	|
+| KMeans               	| 33.33       	| 42.85 	| 59.45              	| 30.0  	| 0    	| 41.21                  	|
+| SVM                  	| 25          	| 56.25 	| 57.14              	| 29.16 	| 25.0 	| 45.25                     |
+|                      	|             	|       	|                    	|       	|      	|                        	|
 
 
+###CONCLUSION:
+* Support Vector Machines showd the maximum accuracy.Model has been built to do music genre classifier .Accuracy still remains a concern .This is not a model for a standard dataset,dataset has been built from API's and model has been built for the custom data set.Suggestions for area of improvement ,get more features from the API's ,then do dimensionality reduction techniques and then build the model .Only a  limited number of   features from the API's has been chosen in this system . 
 
 
 

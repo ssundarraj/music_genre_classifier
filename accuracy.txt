@@ -1,0 +1,12 @@
+
+					Electronica 	Urban 	 Alternative&Punk 	 Pop 	 Rock
+
+logistic 			0 	 			56.52    49.1                28.57  50.0
+44.555
+
+
+kthnearest			33.33 			42.85    59.45               30.0    0.0
+41.21
+
+SVM					25              56.25    57.14               29.16 	 25.0
+45.55

@@ -22,6 +22,7 @@ def clean_data(file_name, op_file_name):
         datawriter = csv.writer(cleancsvfile, delimiter=',')
         for row in datareader:
 
+
             if 'nan' in row or row[-1] in ignored_genres:
                 continue
             genre_dict[row[-1]] += 1
